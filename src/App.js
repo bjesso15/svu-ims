@@ -1,11 +1,11 @@
 import { useQuery } from '@apollo/react-hooks';
-import { gql } from 'apollo-boost'
-
+import { gql } from 'apollo-boost';
+import './App.css';
 
 export default function App() {
   return (
     <div>
-      <h2>Welcome to my The SVU Women's Basketball Inventory Management System</h2>
+      <h1>Welcome to my The SVU Women's Basketball Inventory Management System</h1>
       <br></br>
       <DisplayAthletes/>
     </div>
@@ -13,15 +13,27 @@ export default function App() {
 }
 
 const getAthletes = gql`
-  query Athletes {
-    athletes {
-      id
-      athleteFullName
-      number
-      year
-      birthday
+query Athletes {
+  athletes (first: 100) {
+    athleteFullName
+    birthday
+    id
+    number
+    year
+    inventory {
+      jerseyNumber
+      size
+      inUse
+    }
+    travelGear {
+      hoodieSize
+      longSleeveSize
+      shortSize
+      sweatsSize
+      tShirtSize
     }
   }
+}
 `;
 
 function DisplayAthletes() {
@@ -30,13 +42,13 @@ function DisplayAthletes() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error : {error.message}</p>;
 
-  return data.locations.map(({ athleteFullName, number, year, birthday }) => (
-    <div>
-      <h3>Our Athletes</h3>
-      <br />
-      <b>About this location:</b>
-      <p>This is a list of all the Women on the SVU Women's Basketball team.</p>
-      <br />
+  return data.athletes.map(({ athleteFullName, number, year, birthday, id, inventory, travelGear }) => (
+    <div key={id}>
+      <div className="Row">
+        <div className="Column">{athleteFullName} | {number}</div>
+        <div className="Column">Jersey Size: {inventory.size}</div>
+        <div className="Column">Travel Gear Sizes: {travelGear.hoodieSize}</div>
+      </div>
     </div>
   ));
 }

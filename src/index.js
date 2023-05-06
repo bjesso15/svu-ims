@@ -11,10 +11,9 @@ import { ApolloProvider } from '@apollo/react-hooks';
 const httpLink = new createHttpLink({
   uri: 'https://api-us-east-1-shared-usea1-02.hygraph.com/v2/clfsz1dlc2clm01uegdfzd77m/master',
   headers: {
-    authorization: `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImdjbXMtbWFpbi1wcm9kdWN0aW9uIn0.eyJ2ZXJzaW9uIjozLCJpYXQiOjE2ODI1NDQzMjMsImF1ZCI6WyJodHRwczovL2FwaS11cy1lYXN0LTEtc2hhcmVkLXVzZWExLTAyLmh5Z3JhcGguY29tL3YyL2NsZ3g1Zmg5bTBvZHYwMXQ4NnM2N2F0djUvbWFzdGVyIiwibWFuYWdlbWVudC1uZXh0LmdyYXBoY21zLmNvbSJdLCJpc3MiOiJodHRwczovL21hbmFnZW1lbnQuZ3JhcGhjbXMuY29tLyIsInN1YiI6ImM3OTA3ZWIyLTgzNjMtNDhlMS1iMGQyLTZiZjM5NGU1ZTM2ZSIsImp0aSI6ImNsZ3k3ZzU0NjFtb2QwMXRhZmN3dzdnaTMifQ.Zy3orzSTOC4ppN3SBJfmbTdcTzlVL_YJJoce8XIVfZjd3eP_G4rOF1zne2M82Gg6btpIFs8ZhkigE72nNMgSJO7tScOU2hXS2t9AZbjIvJK0r6KIqpIDbeGKURGUdt7jRr8VkcnVvo7127mUu3nekgt8qYPj3FiD2q1BYvcv2MB5yxXL9oq_pD0Vw9qrdYBwU8CIFJm3U373pQ8BUqVJiL_q9QsJIEY_C48MpTnNi6uuWChshSJ3VjplOCRrt6nT02KK2_pj4sI0EdQ131kjoaiqk22d59Vex4sHpNvo5ErovMWcJRjUwgUxbQECxZhH7Ltk_pGKlnro7X0biiiRyR72pPlSWN_cLoTKgcyIfQTtd18LMoDS8NLLuKshLQwC-n7WJ_HRbfddaFv8LZCDBp1tEXPrZV0BFSchh2GaPsEeDFBUosliVe5dEohbZe9hCmfLgVFeIEKSm-ZC14lpY6cQsAXfzT-2-m16Y8u5S9w2YO1r4JIFlF7xbmzQJ2z09fhOmXDGEPjJae6NlLjG_HHdjDtVT44ZtQjyHa9aSnJA3EDJId2yBiI5mxIN-19TrXRn_1ywR8PBVOEr7QzL410oect1lI6FMxu9x14DKlYAxpRtQQBAc3g5S8Uwe3EfixQ8oLzRtaayEdpYuOQnmFxDK1NtblOaLMFDY-vQSkk`,
+    authorization: `Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImdjbXMtbWFpbi1wcm9kdWN0aW9uIn0.eyJ2ZXJzaW9uIjozLCJpYXQiOjE2ODMyNDAwNDUsImF1ZCI6WyJodHRwczovL2FwaS11cy1lYXN0LTEtc2hhcmVkLXVzZWExLTAyLmh5Z3JhcGguY29tL3YyL2NsZnN6MWRsYzJjbG0wMXVlZ2RmemQ3N20vbWFzdGVyIiwibWFuYWdlbWVudC1uZXh0LmdyYXBoY21zLmNvbSJdLCJpc3MiOiJodHRwczovL21hbmFnZW1lbnQuZ3JhcGhjbXMuY29tLyIsInN1YiI6IjBiYjVhYmE2LTAyYjAtNGRlNS1iYWMyLTQ0NTI3MDdkNDZlYiIsImp0aSI6ImNsaDlwbnZicTB2cG8wMXVmNWo2MmFta3kifQ.0YnBiMeUBKpm-yz-1BHaXF8DQphAaGWqZm9VNqadguYFqbyKaUes_8y0cRYjTfGVEaKrBhZ_YjdQzWa0BL8i3YOLMzGlGNi8caM3wbzkoZ3MbRc-MFneSl9bu6bfvBoc8uN4Yc3JL0mi_NFw4GDBpttNfUqp9OE8hZkmO5Tj5fSh1_bg5pBrO5E-kfZqGaI3Lz8wr4LJzJr3XpwuaJRqkfLpotFOrkGL1ovQSBiKZdNgHnLMbE0sZtvIsROZ9K7EEzx_xw3imHATkJ8BBO-XgDGRxkLl4Ustq-T7qdtfTDFuBOBhcgsfTot8eWroEtypBEfDXY9PANBOo04ds4v3iQTb8-0BdXQ81_o1AiQdIPItCo2OgCUyke-bwQp7KLiqEYfMiAL8iI4M9O2RGuoizX0Im8rJOYg4W5er4nDdvrs2R-XroGrWP8eiHY5nsDouc_AKC39LzvGtzbO08XFPzBVMpbUBYQtDUTuhWosB-x1ZyEltrNPjNLpalNgSgmk9ioR4d2wmji4k69kletf4oWSgNCNSIDuSKl3Ny2FluuiZeVRKbBhDPQhZsA-NgALWrhJk2oNy1O7hnl7iqfoEqWCImsGw9yEqcIAwkCLCBIOVxCchxh9DFYy3eq7hcO75ORVnogJ5wHenfamHWN8gC42a8CCrAiDXp5nPdG4anKs`,
   },
 })
-
 
 const client = new ApolloClient({
   link: httpLink,
@@ -27,25 +26,4 @@ root.render(
     <App />
   </ApolloProvider>,
 );
-
-// function Athletes({ onDogSelected }) {
-//   const { loading, error, data } = useQuery(GET_DOGS);
-
-//   if (loading) return 'Loading...';
-//   if (error) return `Error! ${error.message}`;
-
-//   return (
-//     <select name='dog' onChange={onDogSelected}>
-//       {data.dogs.map((dog) => (
-//         <option key={dog.id} value={dog.breed}>
-//           {dog.breed}
-//         </option>
-//       ))}
-//     </select>
-//   );
-// }
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
