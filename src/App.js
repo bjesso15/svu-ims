@@ -44,10 +44,12 @@ function DisplayAthletes() {
 
   return data.athletes.map(({ athleteFullName, number, year, birthday, id, inventory, travelGear }) => (
     <div key={id}>
-      <div className="Row">
-        <div className="Column">{athleteFullName} | {number}</div>
-        <div className="Column">Jersey Size: {inventory.size}</div>
-        <div className="Column">Travel Gear Sizes: {travelGear.hoodieSize}</div>
+      <div className="table">
+        <div className="Row">
+          <div className="Column">{athleteFullName} | {number}</div>
+          <div className="Column">Jersey Size: {inventory.size}</div>
+          <div className="Column">Travel Gear Sizes: {travelGear.hoodieSize}</div>
+        </div>
       </div>
     </div>
   ));

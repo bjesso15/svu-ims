@@ -8,6 +8,7 @@ body {
 
 table {
   width: 100%;
+  align-self: center;
 }
 
 .Row :hover {background-color: rgb(4, 4, 4);} {
