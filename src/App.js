@@ -6,6 +6,7 @@ export default function App() {
   return (
     <div>
       <h1>Welcome to my The SVU Women's Basketball Inventory Management System</h1>
+      <img src="src\images\svuKnightHead.png" alt="SVU Knights"></img>
       <br></br>
       <DisplayAthletes/>
     </div>
@@ -47,8 +48,8 @@ function DisplayAthletes() {
       <div className="table">
         <div className="Row">
           <div className="Column">{athleteFullName} | {number}</div>
-          <div className="Column">Jersey Size: {inventory.size}</div>
-          <div className="Column">Travel Gear Sizes: {travelGear.hoodieSize}</div>
+          <div className="Column">Jersey Size: {inventory?.size}</div>
+          <div className="Column">Travel Gear Sizes: {travelGear?.hoodieSize}</div>
         </div>
       </div>
     </div>
