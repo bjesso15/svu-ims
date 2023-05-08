@@ -17,6 +17,7 @@ table {
   text-align: center;
   width: 100%; /*Optional*/
   border-spacing: 1px; /*Optional*/
+  float: center;
 }
 
 .Column {
@@ -25,6 +26,7 @@ table {
   text-align: left;
   border: 3px solid black;
   border-spacing: 10px; /*Optional*/
+  float: center;
 }
 
 img {
