@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div>
       <h1>Welcome to my The SVU Women's Basketball Inventory Management System</h1>
-      <img src="src\images\svuKnightHead.png" alt="SVU Knights"></img>
+      <img src="C:\git\svu-ims\public\images\svuKnightHead.png" alt="SVU Knights"></img>
       <br></br>
       <DisplayAthletes/>
     </div>
