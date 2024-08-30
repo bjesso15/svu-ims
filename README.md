@@ -1,3 +1,6 @@
+
+# An inventory management system for the SVU Women's Basketball Team
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
